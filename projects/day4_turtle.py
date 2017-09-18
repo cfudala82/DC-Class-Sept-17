@@ -26,10 +26,10 @@ from turtle import *
 #
 # mainloop()
 
-from turtle import *
-pencolor('orange')
-width(10)
-circle(180)
+# from turtle import *
+# pencolor('orange')
+# width(10)
+# circle(180)
 
 # for i in range(5):
 #     forward(100)

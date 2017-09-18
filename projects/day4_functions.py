@@ -111,7 +111,7 @@ def playAgain():
     answer = str(input('Do you want to play again? (Y or N): '))
 
     while True:
-        if answer == 'Y' or 'y' or 'N' or 'n':
+        if answer in ['Y', 'y', 'N', 'n']:
             break
         else:
             print('Invalid Input.')
