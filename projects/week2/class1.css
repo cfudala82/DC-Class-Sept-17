@@ -1,0 +1,34 @@
+h1 {
+  color: blue;
+}
+
+a {
+  color: red;
+  border: 1px solid #ccc;
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {  /*Sudo selector*/
+  color: green;
+  text-decoration: underline;
+}
+
+
+p {
+  margin: 1px;
+  padding: 0;
+}
+
+.content { /*instead of id (#) use selector (.)*/
+  color: brown;
+}
+
+ul li {
+  color: red;
+}
+
+ul li: last-child {
+  color: blue; !important
+}
