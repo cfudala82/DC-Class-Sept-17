@@ -1,0 +1,26 @@
+.inALine1 {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: red;
+}
+
+.inALine2 {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 20%;
+  background-color: blue;
+}
+
+.inALine3 {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  left: 80%;
+  background-color: green;
+}
+
+h2 {
+  font-size: 2em;
+}
