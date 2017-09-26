@@ -1,0 +1,46 @@
+body {
+  position: relative;
+  width: 40%;
+  left: 30%;
+  z-index: -1;
+}
+
+.modal-dialog {
+  display: block;
+  position: absolute;
+  height: 220px;
+  left: 140px;
+  right: 140px;
+  margin: 0 auto;
+  top: 300px;
+  z-index: 1;
+  background-color: white;
+  border: solid;
+  border-width: 5px;
+}
+
+.modal-header {
+  background-color: grey;
+}
+
+.modal-title {
+  font-size: 3em;
+  color: white;
+}
+
+.modal-content {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 70px;
+  font-size: 1.5em;
+}
+
+.modal-buttons {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+  font-size: 100px;
+}
