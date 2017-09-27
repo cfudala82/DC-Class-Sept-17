@@ -1,0 +1,9 @@
+
+/*media query in css can be used to control the width of the screen.  If the
+user shrinks the screen you can lower the number of columns so your content
+can fit on the page.  ???? double check use and porperties ???*/
+@media (min-width: 800px) {
+  body {
+    background-color: red;
+  }
+}
