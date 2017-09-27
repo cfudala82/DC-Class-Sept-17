@@ -1,19 +1,41 @@
 header {
+  width: 100%;
+  position: static;
   background-color: red;
+  padding: 5px;
 }
 
 .columns {
-
+  display: inline;
+  top: 100px;
 }
 
 .column1 {
+  padding: 10px;
+  position: absolute;
+  left: 5px;
+  width: 20%;
+  right: 80%;
   background-color: blue;
+  overflow: scroll;
 }
 
 .column2 {
+  position: absolute;
+  left: 20%;
+  width: 80%;
+  padding: 10px;
   background-color: green;
+  overflow: scroll;
 }
 
 footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
   background-color: purple;
+}
+
+p {
+  text-align: justify;
 }
