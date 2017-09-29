@@ -1,18 +1,12 @@
-print('Hello world')
-print('practice git')
-print("""what is this all about, will this text editor actually wrap arounor
-    not,lets find out""")
+lettersDict = {}
 
-def darkmouse(x,y):
-    return
+sentence = input('Word Histogram, Please input a sentence: ')
 
-if x == y:
-    print('statement')
-else:
-    x = False
+for i in lowerWord:
+    lettersDict[i] = 0
 
-while x < 10:
-    count += 1
+for i in lowerWord:
+    lettersDict[i] = lettersDict[i] + 1
 
-while x === 0:
-    return False
+print(word)
+print(lettersDict)
