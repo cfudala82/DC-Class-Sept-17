@@ -1,12 +1,13 @@
-lettersDict = {}
+wordsDict = {}
 
 sentence = input('Word Histogram, Please input a sentence: ')
+splitSentence = sentence.split()
 
-for i in lowerWord:
-    lettersDict[i] = 0
+for i in splitSentence:
+    wordsDict[i] = 0
 
-for i in lowerWord:
-    lettersDict[i] = lettersDict[i] + 1
+for i in splitSentence:
+    wordsDict[i] = wordsDict[i] + 1
 
-print(word)
-print(lettersDict)
+print(sentence)
+print(wordsDict)
