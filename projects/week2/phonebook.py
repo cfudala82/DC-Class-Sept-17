@@ -41,6 +41,7 @@ while True:
     print('3. Delete an entry')
     print('4. List all entries')
     print('5. Quit')
+    
     selection = int(input('What do you want to do (1-5)?: '))
 
     if selection == 1:
