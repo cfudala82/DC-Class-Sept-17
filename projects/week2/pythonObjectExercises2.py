@@ -1,29 +1,63 @@
-# Add a method
-#
-# Add a print_info method to the Vehicle class. It will print out the vehicle's information like so:
-#
-# >>> car.print_info()
-# 2015 Nissan Leaf
-# Add a method 2
-#
-# Go back to the Person class. Add a print_contact_info method to the Person class that will print out
-# the contact info for a object instance of Person. You will use it thus:
-#
-#
-# >>> sonny.print_contact_info()
-# Sonny's email: sonny@hotmail.com, Sonny's phone number: 483-485-4948
-# Add an instance variable (attribute)
-#
-# Add a friends instance variable (attribute) to the Person class. You will initialize it to an empty list
-# within the constructor __init__. Once you've done this you should be able to add a friend to a person using list's append method:
-#
-#
-# jordan.friends.append(sonny)
-# sonny.friends.append(jordan)
-# You should also be able to get the number of friends a person has by using the len function on his friends:
+class Person:
+    """
+    Person class saves names, emails, phone numbers, and friends to an object.
+    Method greet() greets one person from another.  Method print_contact_info
+    prints objects email & phone number.
+    """
 
-# >>> len(jordan.friends)
-1
+    def __init__(self, name, email, phone):
+        friends = []
+        count = 0
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.friends = friends
+        self.count = count
+
+    def greeting_count(self):
+        self.count += 1
+
+    def greet(self, other_person):
+        print('Hello {}, I am {}!'.format(other_person.name, self.name))
+        self.greeting_count()
+
+    def print_contact_info(self):
+        print(self.name, "'s email: ", self.email, ' ',
+              self.name, "'s phone: ", self.phone, sep='')
+
+    def add_friends(self, addFriend):
+        self.friends.append(addFriend)
+
+    def __str__(self):
+        return 'Person: {} {} {}'.format(self.name, self.email, self.phone)
+
+
+sonny = Person('Sonny', 'Sonny@gmail.com', '222-333-4455')
+jordan = Person('Jordan', 'Jordan@gmail.com', '999-444-6677')
+
+sonny.print_contact_info()
+jordan.print_contact_info()
+
+jordan.add_friends(sonny)
+sonny.add_friends(jordan)
+
+print(len(jordan.friends))
+print(len(sonny.friends))
+
+sonny.greet(jordan)
+jordan.greet(sonny)
+
+sonny.greet(jordan)
+print(sonny.count)
+
+sonny.greet(jordan)
+print(sonny.count)
+
+jordan.greet(sonny)
+print(jordan.count)
+
+print(jordan)
+print(str(jordan))
 
 
 class Vehicle:
@@ -33,7 +67,8 @@ class Vehicle:
         self.year = year
 
     def print_info(self):
-        print(car.year, car.make, car.model)
+        print(self.year, self.make, self.model)
+
 
 car = Vehicle('Nissan', 'Leaf', '2015')
 
