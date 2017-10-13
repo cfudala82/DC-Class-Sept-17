@@ -3,21 +3,22 @@
 
 
 
-function letterHistogram (string) {
-  // var letters = [];
+function letterHistogram (str) {
+  var letters = [];
   var strObject = {};
 
-  for (var i = 0; i < string.length; i++) {
-    var letters = [];
-    var letter = string.charAt(i);
+  for (var i = 0; i < str.length; i++) {
+    var letter = str.charAt(i);
     letters.push(letter);
-    // if () {
-    //
-    // } else {
-    //
-    // }
+    // console.log(letters);
+  // }
+  // for () {
+    strObject.letters = function(strObject.letters + 1 || 1);
+    // console.log(strObject);
   }
+return strObject;
 }
 
-var a = letterHistogram('banana');
-console.log(a);
+letterHistogram('banana');
+// console.log(a);
+console.log(letterHistogram('banana'));
