@@ -1,3 +1,5 @@
+// Prints a banner, wraps stars around a text that was input into the function.
+
 function printSquare (string) {
 
   var word = string.length;
