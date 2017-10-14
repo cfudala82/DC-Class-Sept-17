@@ -13,7 +13,7 @@ function letterHistogram (str) {
     // console.log(letters);
   // }
   // for () {
-    strObject.letters = function(strObject.letters + 1 || 1);
+    strObject.letters = strObject.letters + 1 || 1;
     // console.log(strObject);
   }
 return strObject;
