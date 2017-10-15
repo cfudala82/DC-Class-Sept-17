@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Todo List Exercise</title>
-    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
     <script>
     /*
     Make it so that when you click on one of the links on this page,
@@ -12,10 +13,10 @@
     */
     $(function() {
       // Write code here
-      $('a').click(function () {
-        event.preventDefault('href');
-        var newLink = $('a').html();
-        $('#iframe').html(newLink);
+      $('a').click(function (html) {
+        var newLink = $(this).attr('href');
+        $('#iframe').attr('src', newLink);
+        html.preventDefault();
       });
     });
     </script>
