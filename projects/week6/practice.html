@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery plugins</title>
+    <link href="path/to/lightbox.css" rel="stylesheet">
+    <style media="screen">
+
+    </style>
+  </head>
+  <body>
+    <h1>hello</h1>
+
+    <a href='king_of_spades.png' data-lightbox="image-1" data-title="My caption">Image #1</a>
+    <a href='queen_of_spades.png' data-lightbox="image-1" data-title="My caption">Image #1</a>
+    <a href='ace_of_spades.png' data-lightbox="image-1" data-title="My caption">Image #1</a>
+
+    <button></button>
+
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="/static/lightbox2-master/dist/js/lightbox.js"></script>
+    <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <title></title>
+    <script>
+
+      var kingOfHearts =  { point: 13, suit: 'hearts'   };
+      var aceOfDiamonds = { point: 1,  suit: 'diamonds' };
+
+      var deck = [kingOfHearts, aceOfDiamonds];
+
+      // alert(deck[0]);
+      var card = deck[1];
+      alert(card.point + card.suit);
+      alert(card.point);
+      alert(card.suit);
+
+    </script>
+
+
+  </head>
+  <body>
+
+
+  </body>
+</html> -->
