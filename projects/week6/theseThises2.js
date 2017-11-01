@@ -17,11 +17,17 @@ class Person {
       console.log(this.createGreeting(other));
     }, 2000);
   }
+  createGreetingsForFriends () {
+    let greetings = this.friends.map((friend)=>{
+      return this.createGreeting(friend);
+    })
+    return greetings;
+  }
 }
 
-var me = new Person('Chris');
-var mo = new Person('Mo');
-me.addFriend(mo);
-me.greet(mo);
-mo.greet(me);
-mo.lazyGreet(me);
+var alfie = new Person('Alfie');
+var anushka = new Person('Anushka');
+var henrique = new Person('Henrique');
+alfie.addFriend(anushka);
+alfie.addFriend(henrique);
+console.log(alfie.createGreetingsForFriends());
