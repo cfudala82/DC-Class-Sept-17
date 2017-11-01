@@ -11,8 +11,8 @@ class Hand {
     this.cards = [];
   }
 
-  addCard(card) {
-    this.cards.push(card);
+  addCard(cards) {
+    this.cards.push(cards);
     return this.cards;
   }
   points(card, point) {

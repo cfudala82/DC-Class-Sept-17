@@ -1,0 +1,77 @@
+Class 10/31/17
+
+  1-Syntax error:Typo forgot paranthesis or brace.
+  2-Max Call/ Stack Overflow: unchecked recursion.
+  3-Reference Error: variable not defined.
+  4-Type error: more in JS than in Python, missing attribute or using undefined
+  unexpectedly.
+
+Debuggining Techniques
+
+  1-console.log
+  2-Node Debugger
+    -node debug (call script)
+      -starts in debugging mode
+      -set a break point using ( debugger; )
+      - ( s ) for step
+      - ( c ) for continue
+      -at the debug point you can check to see what certain variables are, check to see everything is what its supposed to be
+  3-Chrome Debugger
+    -there is a demo
+    -sources tab
+    -click on line number, sets breaking point
+    -there is stepping but figure out the rest
+
+Debugging CSS
+  1-go to developer tools on browser and manipulate the css right on the current page.
+  2-Computed tab shows you all the attributes
+  2-top right of styles tab has :hov .cls and + tabs
+
+HTTP Errors
+
+  https://http.cat/
+
+  404: You typed the wrong URL?
+  403: You're not logged in? Do you have permission?
+    -Am I logged in, do I have permission
+  500: Probably not your fault or maybe you did something to break the page?
+    -Could be user of server's fault or Server fault.
+  502/503: Website/service is down, time for a beer?
+  504: Your request took too long and was killed.
+    -Trying to do something to big for the API to handle, break it down to smaller pieces
+  400: Did you call the API correctly?
+  401: Are you logged in? Do you have permission?
+    -Kind of the same thing as 403
+  405: Did a POST instead of GET or vice versa?
+
+--------------------------------
+pg-promise
+
+  Query Methods
+    -one: ex.: check to see if it exists if not make it
+
+  SQL Injection
+    -make sure to put rejection so you can debug,
+      catch (function(e) {
+        console.log(e);
+      });
+    -YOU CAN'T LET RAW DATA COME IN FROM A WEB FORM, sanitize your inputs, this is a SECURITY ISSUE, leaves you vulnerable for web attacks.
+
+  SANITIZE YOUR Inputs
+    - var q = "INSERT INTO restaurant VALUES (default, $1)";
+      db.result(q, name)
+        .then(function (result) {
+          console.log(result);
+      });
+    -pg-promise puts in the escape stuff for you then it sends it as a string to your database
+    - var biz = {name: "Lard Lad Donuts"};
+      var q = "INSERT INTO restaurant \
+        VALUES (default, ${name})";
+      db.result(q, biz)
+        .then(function (result) {
+          console.log(result);
+        });
+
+  Closing Your Connection
+
+    - pgp.end()
