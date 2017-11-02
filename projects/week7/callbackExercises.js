@@ -21,7 +21,7 @@ function product(numbers, callback) {
   setTimeout(function () {
     var x = numbers.reduce(function(a, b) {
       return a * b;
-    }, 1);
+    }, 2);
     callback(x);
   }, 2500);
 }

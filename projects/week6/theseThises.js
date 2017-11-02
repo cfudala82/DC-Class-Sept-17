@@ -21,7 +21,12 @@ class Person {
 
 var me = new Person('Chris');
 var mo = new Person('Mo');
+var jerry = new Person('Jerry');
+
 me.addFriend(mo);
+me.addFriend(jerry);
 me.greet(mo);
 mo.greet(me);
 mo.lazyGreet(me);
+
+console.log(me);
