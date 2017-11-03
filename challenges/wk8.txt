@@ -1,0 +1,22 @@
+InventIT.com
+
+1) Descripotion Page
+-The app is a Twitter like app, except this app is geared toward people who want to invent new products.  Weather it be toys, medicine, machines, etc.  This app will be able to bring together people of like goals and create a community of people that can help each other out or just bounce ideas off of each other.
+
+2) Login Page
+-The first page would be the Login page.  You will be able to create your own login, or use google, facebook, etc. logins.
+
+3) Profile Page
+-At the top of the page will be a nav bar.  In the nav bar will be links to:
+your profile page, your account info (change passwords, change name, change photo, etc.), your description page, etc.
+-Here you can display your profile photo at the top left right below the nav bar.
+-Next to your photo on the right will be a personal mission statement.
+-If you click on the photo it will take you to the description page.
+-On the bottom of the page there will be a place for you to show off your invention or inventions with short descriptions.
+-Even lower you will be able to post articles of interest from NASA, forums, magazines, scientific journals etc.
+-On the right side of the page there will be a window 33% wide that will span most of the height of the page.  In this window there will be a list of people that you are connected to.  Each list will have a photo and name which will be links to there profile page. Under the peoples names an photos will be a new activity going on or date of last activity, Weather it be a new post or a new link to something they find important. At the bottom of the list will be a link that will connect you to new people.
+-Right clicking on the name of a person or their photo will give you an link to disconnect from that person, message that person, like what that person has displayed.
+
+4) Description Page
+-on this page you will be able to show off your talents, your hobbies, your inventions, etc.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

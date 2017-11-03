@@ -17,14 +17,17 @@ function greeting(person, callback) {
   }, 2000);
 }
 
+
 function product(numbers, callback) {
   setTimeout(function () {
     var x = numbers.reduce(function(a, b) {
       return a * b;
-    }, 2);
+    }, 1);
     callback(x);
   }, 2500);
 }
+
+
 
 add(1, 2, function (result) { console.log(result); });
 subtract(10, 3, function (result) { console.log(result); });

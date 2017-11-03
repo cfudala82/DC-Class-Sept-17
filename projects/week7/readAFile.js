@@ -5,6 +5,8 @@ var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
+
+
 rl.question("Filename: ", function(file) {
     fs.readFile(file, 'utf-8', function (error, buffer) {
       if (error) {
