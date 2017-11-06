@@ -1,0 +1,21 @@
+Express Middleware
+
+  -Whenever you see app.use(), it means your using middleware
+
+    app.use(function(request, response, next) {
+      cosole.log(request.method, request.path);
+      next();
+    })
+
+  -Morgan is a nicer logging system?
+    npm morgan install --save
+
+  Session Midddleware
+
+    -npm install express-session
+    -Session middleware will add a cookie for you.
+      -Everytime the browser sends a request the Session Middleware will send a cookie with it.
+
+Storing Passwords
+
+  -
