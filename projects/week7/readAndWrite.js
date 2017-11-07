@@ -6,20 +6,22 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-rl.question("Filename: ", function(filename) {
-  fs.readFile(filename, function (error, buffer) {
+rl.question("Input file: ", function(inputFile) {
+  fs.readFile(inputFile, 'utf-8', function (error, buffer) {
     if (error) {
-      console.error(error.message);
+      console.log(error.message);
       return;
     }
-    var contents = buffer.toString();
-    var backwards = contents.split('').reverse().join('');
-    fs.writeFile(filename, backwards, function (error) {
-      if (error) {
-        console.error(error.message);
-        return;
-      }
-      console.log('File Save: ', filename);
+    rl.question("Output file: ", function (outputFile) {
+      var text = buffer.toString().toUpperCase();
+      rl.close();
+
+      fs.writeFile(outputFile, text, function (err) {
+        if (error) {
+          console.log(error.message);
+          return;
+        };
+      });
     });
   });
 });

@@ -13,7 +13,7 @@ rl.question("Filename: ", function(file) {
         console.log(error.message);
         return;
       }
-    console.log(buffer);
-  })
+      console.log(buffer.toString().toUpperCase());
+    });
   rl.close();
 });

@@ -1,0 +1,38 @@
+Websockets with Socket.IO
+  -socket.io needs 'hhtp' app not myexpress
+    Ex.:
+      var http = require('http').Server(app);
+      var io = require('socket.io')(http);
+
+  - install nodemon
+
+  -http.listen(8000,function() {
+    console.log('listening on port 8000');
+  });
+
+  -Connect and disconnect
+    ex.:
+      io.on('connection', function(client){
+        console.log('CONNECTED');
+        client.on('disconnect', function () {
+          console.log('EXITED');
+        });
+      });
+
+
+  -code to put in the body of your html in .hbs file
+    Ex.:
+      <script src="/socket-io/socket.io.js"></script>
+      <script>
+        var server = io();
+
+        server.on('connect', function (s) {
+          console.log('connected');
+        });
+      </script>
+
+  -
+    <input id="message" onkeypress="send_message(event)">
+    <pre id="chat-box"></pre>
+
+    
