@@ -1,17 +1,25 @@
 var readline = require('readline');
-var fs = require('fs');
 var request = require('request');
+var fs = require('fs');
 
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-var url = 'https://nodejs.org/en/';
-request.get(url, function (error, response, html) {
-  if (error) {
-    console.error(error.message);
-    return;
-  }
-  console.log(html);
+rl.question("URL: ", function(inputURL) {
+  rl.question("Output file: ", function (outputURL) {
+    request.get(inputURL, function (error, response, html) {
+      if (error) {
+        console.error(error.message);
+        return;
+      };
+      rl.close();
+      fs.writeFile(outputURL, html, function (err) {
+        if (error) {
+          console.log(error.message);
+          return;
+        };
+      });
+    });
+  });
 });
