@@ -1,0 +1,19 @@
+{
+  "name": "recipebook",
+  "version": "1.0.0",
+  "description": "recipe manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Fudala",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "consolidate": "*",
+    "dust": "*",
+    "dustjs-helpers": "*",
+    "express": "*",
+    "pg": "*"
+  }
+}
