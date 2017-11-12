@@ -1,46 +1,29 @@
 
 var prompt = require('prompt-promise');
-var res = [];
+var pgp = require('pg-promise')({});
+var db = pgp({database: 'music'});
+var result = [];
+
 
 prompt('Album name? ')
 .then(function albumName(val) {
-  res.push(val);
+  result.push(val);
   return prompt('albumYear: ');
 })
 .then(function albumYear(val){
-  res.push(val);
+  result.push(val);
   return prompt('Artist ID? ');
 })
 .then(function artistId(val) {
-  res.push(val);
-  console.log(res);
+  result.push(val);
+  var q = "INSERT INTO album VALUES (default, $1, $2, $3)";
+  db.result(q, result);
+  console.log(result);
   prompt.done();
+  pgp.end();
+  result = [];
 })
 .catch(function rejected(err) {
   console.log('error:', err.stack);
   prompt.finish();
 });
-
-
-
-
-
-
-
-
-
-
-
-// var pgp = require('pg-promise')({
-//   // initialization options
-// });
-// var db = pgp({database: 'restaurant'});
-//
-//
-//
-// db.query('SELECT * FROM restaurant')
-//   .then(function (results)) {
-//     results.forEach(function (r) {
-//       console.log(r.id, r.name. r.address, r.category);
-//     });
-//   });
