@@ -19,7 +19,7 @@ app.get('/', function (request, response) {
 });
 
 // Make an express program that will display "Hello, world!" at the root URL: /
-app.get('/', function (request, response) {
+app.get('/hello_world', function (request, response) {
   response.send('Hello World');
 });
 
