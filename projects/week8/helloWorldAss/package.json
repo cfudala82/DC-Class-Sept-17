@@ -1,0 +1,15 @@
+{
+  "name": "helloworldass",
+  "version": "1.0.0",
+  "description": "wk8 assignment",
+  "main": "helloWorld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me dog",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "hbs": "^4.0.1"
+  }
+}
