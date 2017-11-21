@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Hello from './Hello';
-// import HelloList from './HelloList';
+import HelloList from './HelloList';
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
 
         <Hello name='Billy'/>
 
-        {/* <HelloList /> */}
+        <HelloList />
 
       </div>
     );
