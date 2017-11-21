@@ -1,0 +1,36 @@
+Digital Crafts -Cpanel Talk
+11/16/2017
+
+Phil Jackson
+cPanel@underscorephil
+
+-There's no reason I can't do that
+-This american life podcast
+  -gap of creativity
+  -tech is a creative endeaver
+
+  -git
+  -perl
+  -JS
+    -angular
+    -YUI 1 (deprecated)
+  -atlassian tooling
+    -jira
+    -bitbucket
+
+-org
+  -11 cross functional Scrum teams
+    -backend dev
+    -UI dev
+    -QA
+    -documentation
+    -ScrumMaster
+    -Product owner
+
+-SCRUM book
+
+-The Effective Executive book
+
+-DO THINGS
+
+-Why does every user agent have mozilla?  look it up.

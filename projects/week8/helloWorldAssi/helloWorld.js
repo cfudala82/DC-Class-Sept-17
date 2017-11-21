@@ -12,6 +12,7 @@ var animals = [
 // view engine setup
 app.set('views', './views');
 app.set('view engine', 'hbs');
+app.use(express.static('public'));
 
 app.get('/', function (request, response) {
   let name = 'Chris';
