@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {Card, CardTitle, CardText} from 'material-ui/Card';
+import './App.jsx'
+import './contactList.css';
 
 class ContactList extends Component {
   constructor(props) {
@@ -6,13 +9,22 @@ class ContactList extends Component {
   }
 
   render () {
-    console.log('Testing ', this.props.contacts);
+    console.log(obj);
+    var obj = this.props.contacts;
+    obj.sort(this.props.contacts.name);
+
     return (
-      <div>
-        {this.props.contacts.map((contact) => {
-          return <p>{contact.name + ', ' + contact.email + ', ' + contact.phone + ', ' + contact.address + ', ' + contact.city + ', ' + contact.state + ', ' + contact.zip + '. '}</p>
-        })}
-      </div>
+      <Card className="md-card">
+        <CardTitle title="My Contacts" />
+        <CardText>
+          <ul className='list'>
+            {this.state.obj.map((objs) => {
+              return <li key={objs.name}>{'Name: ' + objs.name  + ' City: ' + objs.city + ' State: ' + objs.state}
+              </li>
+            })}
+          </ul>
+        </CardText>
+      </Card>
     );
   }
 }

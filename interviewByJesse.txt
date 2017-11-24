@@ -1,0 +1,16 @@
+interview questions about being diplomatic, perssistant, etc.
+
+STAR
+
+cqrs acronym
+solid acronym
+grasp acronym
+dry acronym
+
+code complete book
+
+clean code book
+
+google technical websites for resource, gauge yourself with other applicants
+
+Breaking the coding interview Book
