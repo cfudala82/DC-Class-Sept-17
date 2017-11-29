@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {tealA200, darkBlack} from 'material-ui/styles/colors';
+import _ from 'lodash';
+import uid from 'uid';
 import MyForm from './MyForm';
 import ContactList from './contactList';
 import './App.css';
@@ -19,17 +21,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      contacts: [{name: 'Mike', email: 'mike@email.com', phone: '123-456-7891', address: '1234 Street Ave.', city: 'Houston', state: 'TX', zip: '77665'}]
-    }
+      contacts: [{key: uid(10), name: 'Mike', email: 'mike@email.com', phone: '123-456-7891', address: '1234 Street Ave.', city: 'Houston', state: 'TX', zip: '77665'}
+    ]};
   }
 
   add_contact (c) {
     var contacts = this.state.contacts;
-    contacts.push(c)
-    this.setState({contacts: contacts});
+    contacts.push(c);
+
+    var sorted_contacts = _.orderBy(contacts, [user => user.name.toLowerCase()]);
+    console.log(sorted_contacts);
+
+    this.setState({contacts: sorted_contacts});
   }
 
   render() {
+
+
     return (
       <div>
         <MuiThemeProvider muiTheme={theme}>

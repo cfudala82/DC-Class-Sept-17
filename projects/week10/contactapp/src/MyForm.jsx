@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+import uid from 'uid';
 import './MyForm.css';
 
 
@@ -17,9 +18,9 @@ class MyForm extends Component {
   }
 
   handleSubmit(event) {
-    console.log('submitted: ' + this.state.name);
     event.preventDefault();
     this.props.add_contact({
+      key: uid(10),
       name: this.state.name,
       email: this.state.email,
       phone: this.state.phone,
