@@ -39,8 +39,11 @@ class App extends Component {
   }
 
   deleteContact = (key) => {
-    // deete contact by key or unqiue value from state array
-    console.log(key);
+    const contacts = [...this.state.contacts];
+    console.log(contacts);
+    const chipToDelete = contacts.indexOf({key});
+    contacts.splice(chipToDelete, 1);
+    this.setState({ contacts });
   }
 
   render() {

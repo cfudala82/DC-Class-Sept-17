@@ -49,7 +49,7 @@ class ContactList extends Component {
     let renderList = this.props.contacts.map((contact) => {
       if (this.state.clickedTracker[contact.key]) {
         return (<Chip
-          onRequestDelete={() => console.log('Hello')} // DElete
+          onRequestDelete={() => this.props.clickDelete(contact.key)} // DElete
           style={styles.chip}
           onClick={() => this.handleClick(contact.key)}
           key={contact.key}>
