@@ -1,3 +1,5 @@
-ol {
-  text-align: left;
+.list-contacts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

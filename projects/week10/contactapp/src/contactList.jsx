@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import {Card, CardTitle, CardText} from 'material-ui/Card';
-import {List, ListItem} from 'material-ui/List';
+import {List} from 'material-ui/List';
 import Chip from 'material-ui/Chip';
-import {tealA200, tealA100, darkBlack} from 'material-ui/styles/colors';
-import FontIcon from 'material-ui/FontIcon';
+import {tealA200, teal200, darkBlack} from 'material-ui/styles/colors';
 import SvgIconFace from 'material-ui/svg-icons/action/face';
 import Avatar from 'material-ui/Avatar';
 import './contactList.css';
@@ -13,15 +12,14 @@ const styles = {
     backgroundColor: tealA200,
     margin: 4
   },
-  // wrapper: {
-  //   display: 'flex',
-  //   flexWrap: 'wrap',
-  // },
+  wrapper: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  }
 };
 
 
 class ContactList extends Component {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -40,12 +38,18 @@ class ContactList extends Component {
     this.setState({clickedTracker: clickedTracker})
   }
 
+  handleRequestDelete(key) {
+    alert('You clicked the delete icon.');
+    console.log(key);
+    this.props.clickDelete(key);
+  }
+
   render () {
 
     let renderList = this.props.contacts.map((contact) => {
       if (this.state.clickedTracker[contact.key]) {
         return (<Chip
-          onRequestDelete={() => console.log('Hello')}
+          onRequestDelete={() => console.log('Hello')} // DElete
           style={styles.chip}
           onClick={() => this.handleClick(contact.key)}
           key={contact.key}>
@@ -54,11 +58,11 @@ class ContactList extends Component {
     } else {
       return (
         <Chip
-          onRequestDelete={() => console.log('Goodbye')}
+          onRequestDelete={() => this.props.clickDelete(contact.key)} // DElete
           style={styles.chip}
           onClick={() => this.handleClick(contact.key)}
           key={contact.key}>
-          <Avatar icon={<SvgIconFace />} color={darkBlack} hoverColor={tealA100} />
+          <Avatar icon={<SvgIconFace />} backgroundColor={teal200} color={darkBlack} />
           {contact.name  + ': ' + contact.city + ', ' + contact.state}
       </Chip>)
     }
@@ -71,7 +75,7 @@ class ContactList extends Component {
           style={styles.chip}
           title="My Contacts" />
         <CardText>
-          <List>
+          <List className='list-contacts'>
             {renderList}
           </List>
         </CardText>
